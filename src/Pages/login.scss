@@ -1,189 +1,70 @@
-body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+:root{
+    --login-color:   #eaecee;
+    --form-color:  #fdfefe  ;
+}
+
+.container{
+    display: grid;
+    grid-template:
+    " . left right .";
     min-height: 100vh;
-    overflow: hidden;
-    background: #b25034;
+    background: var(--login-color);
 }
 
-.conteiner{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.conteiner .box{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    width: 400px;
-    height: 480px;
-    
-}
-
-.conteiner .box::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 25px;
-    height: 100%;
-    background: linear-gradient(#fff, #fff,#e3e3e3);
-    filter: blur(1px);
-    z-index: 1;
-}
-.conteiner .box::after{
-    content: '';
-    position: absolute;
-    top: 1;
-    right: -1px;
-    width: 25px;
-    height: 100%;
-    background: #9d9d9d;
-    filter: blur(1px);
-    z-index: 1;
-}
-.conteiner .box .shadow{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: #eee;
-}
-.conteiner .box .shadow::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: calc(100% + 96px);
-    width: 120%;
-    height: 240%;
-    background: linear-gradient(rgba(0,0,0,0.075),transparent);
-    transform: skewX(45deg);
-}
-.conteiner .box .shadow::after{
-    content: '';
-    position: absolute;
-    bottom: -200%;
-    left: calc(100% + 80px);
-    width: 100%;
-    height: 200%;
-    background: linear-gradient(rgba(0,0,0,0.075),transparent);
-    transform: skewX(45deg);
-}
-.cover{
-    position:absolute;
-    top:0;
-    left: -100px;
-    width: 100px;
-    height: 100px;
-    background: #b25034;
-    z-index: 10;
-}
-
-.content{
-    position: relative;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(#dbdae1, #a3aaba);
-    box-shadow: 5px 5px 5px rgba(0,0,0,0.1),
-    15px 15px 15px rgba(0,0,0,0.1),
-    20px 20px 20px rgba(0,0,0,0.1),
-    50px 50px 50px rgba(0,0,0,0.25),
-    inset 3px 3px 2px #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.form{
-    width: 260px;
-    position: relative;
+.left{
+    grid-area: left;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    gap: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    -webkit-border-top-left-radius: 10px;
+    -webkit-border-bottom-left-radius: 10px;
+    -moz-border-radius-topleft: 10px;
+    -moz-border-radius-bottomleft: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background: var(--form-color);
 }
 
-.logo{
-    width: 70px;
-    height: 70px;
-    margin-bottom: 10px;
-    background: #444;
-    color: #fff;
+.left .header{
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    font-size: 1.75em;
-    border-radius: 50%;
+    gap: 10px;
 }
-.content .form h2{
+
+.left .header .title{
     font-size: 2em;
-    color: #444;
-    margin-bottom: 20px;
-}
-.content .form .inputBox{
-    position: relative;
-    width: 100%;
-    margin-top: 30px;
-}
-.content .form .inputBox input{
-    position: relative;
-    width: 100%;
-    padding: 10px 0 10px 25px;
-    font-size: 1.25em;
-    background: transparent;
-    box-shadow: none;
-    border: none;
-    border-bottom: 2px solid #444;
-    outline: none;
-    color: #444;
+    font-weight: bold;
 }
 
-.content .form .inputBox i{
-    position: absolute;
-    left: 0;
-    bottom: 15px;
-    font-size: 1.25em;
-    color: #444;
-}
-.content .form .inputBox span{
-    position: absolute;
-    left: 0;
-    padding: 10px 0 10px 25px;
-    font-size: 1.25em;
-    pointer-events: none;
-    color: #444;
-    transition: 0.5s;
+.left .header .description{
+    font-size: .8em;
+    opacity: 40%;
 }
 
-.content .form .inputBox input:focus ~ span,
-.content .form .inputBox input:valid ~ span{
-    transform: translateY(-20px);
-    font-size: 0.9em;
-    color:  #f7f9f9 ;
-    padding: 2px 4px;
-}
-
-.content .form .links{
-    width: 100%;
-    margin-top: 15px;
+.left .form{
     display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.form .links a{
-    color: #444;
-    text-decoration: none;
-    margin: 3px;
+    flex-direction: column;
+    gap: 1em;
 }
 
-.content .form .inputBox input[type="submit"]{
-    background: #444;
-    color: #fff;
-    cursor: pointer;
-    padding: 10px;
-}
-.content .form .inputBox input[type="submit"]:hover{
-    background: #333;
 
+.right{
+    grid-area: right;
+    background-image: url('./../img/login.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    -webkit-border-top-right-radius: 10px;
+    -webkit-border-bottom-right-radius: 10px;
+    -moz-border-radius-topright: 10px;
+    -moz-border-radius-bottomright: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
 }

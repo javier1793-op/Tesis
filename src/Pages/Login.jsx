@@ -5,36 +5,42 @@ import './login.scss'
 const Login = () => {
   return (
     <>
-       <div className="conteiner">
-        <div className="box"> 
-            <div className="cover"></div>
-            <div className="shadow"></div>
-            <div className="content">
-              <div className="form">
-                <h3 className="logo"><i class="fa-solid fa-door-open"></i></h3>
-                <h2>Sing in</h2>
-                <div className="inputBox">
-                  <input type="text" required />
-                  <i class="fa-solid fa-user"></i>
-                  <span>Username</span>
-                </div>
-                <div className="inputBox">
-                  <input type="password" required />
-                  <i class="fa-solid fa-key"></i>
-                  <span>Password</span>
-                </div>
-                <div className="links">
-                
-                  <a href="#">Forgot Password </a>
-                  <i class="fa-solid fa-question"></i>
-                </div>
-                <div className="inputBox">
-                  <input type="submit" value="Login" />
-                </div>
+       <div className="container">
+          <div className="left">
+            <div className="header">
+              <div className="title">Welcome back</div>
+              <div className="description">Welcome back! Please enter your details </div>
+            </div>
+           
+            <div className="form">
+              <div className="inputbox">
+                <span>Email</span>
+              <input type="text" placeholder='Enter your email' />
+              </div>
+
+              <div className="inputbox">
+                <span>Password</span>
+              <input type="password" placeholder='Enter your password' />
+              </div>
+
+              <div className="links">
+                  <span>Forgot Password? </span>
+              </div>
+
+              <div className="inputbox">
+                  <input type="submit" value="Sing in" />
               </div>
             </div>
-            
-        </div>
+              
+          </div>
+
+          <div className="right">
+            <div className="content">
+              <div className="info">"No matter how high a mountain is, there is always a way to the top."</div>
+              <div className="name">Artesano</div>
+              <div className="heading">Carob furniture</div>
+            </div>
+          </div>
        </div>
     </>
   )
