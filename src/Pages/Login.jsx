@@ -27,7 +27,7 @@ const Login = () => {
                   <span>Forgot Password? </span>
               </div>
 
-              <div className="inputbox">
+              <div className="inputbox boton">
                   <input type="submit" value="Sing in" />
               </div>
             </div>
