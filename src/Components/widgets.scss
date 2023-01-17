@@ -11,10 +11,15 @@
 
 .info{
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 2em; 
 }
-.info .alert{
+.info .left-info{
+    display: flex;
+    align-items: center;
+    gap: 2em;
+}
+.info .left-info .alert{
     color: red;
     background: #e5e8e8;
     width: 40px;
@@ -25,9 +30,27 @@
     align-items: center;
     border-radius: 7px;
 }
-.info .description{
+.info .left-info .description{
     font-size: 1em;
     font-weight: bold;
+}
+.info .right-info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.info .right-info button{
+    background:  #82e0aa ;
+    padding: 5px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+    transition: .3s;
+}
+.info .right-info button:hover{
+    background:  #27ae60 ;
+    color: #fff;
 }
 
 .detalle{

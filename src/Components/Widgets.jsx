@@ -7,10 +7,16 @@ const Widgets = () => {
     
     <div className="container">
         <div className="info">
-            <div className="alert">
-            <i class="fa-solid fa-circle-exclamation"></i>
+            <div className="left-info">
+                <div className="alert">
+                <i class="fa-solid fa-circle-exclamation"></i>
+                </div>
+                <div className="description">Destocking due to sales</div>
             </div>
-            <div className="description">Destocking due to sales</div>
+            <div className="right-info">
+                <button>View</button>
+            </div>
+            
         </div>
        <div className="linea"></div>
         <div className="detalle">
