@@ -1,0 +1,77 @@
+.head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    grid-area: head;
+    background: #fff;
+    border-radius: 8px;
+}
+
+.head .left-header{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 1em;
+   margin: 1em;
+}
+.head .left-header .greenting{
+    font-size: 1.2em;
+    font-weight: bold;
+    opacity: 50%;
+}
+.head .left-header i{
+    font-size: 1.2em;
+    color:  #2e86c1;
+    font-weight: bold;
+}
+.head .right-head{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: .7em;
+    gap: 2em;
+}
+.head .right-head .description img{
+    width: 35px;
+    height: 35px;
+    background: #2e86c1;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.head .right-head .mode{
+    color: #f1c40f;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+}
+.head .right-head .description{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+.head .right-head .description i{
+    font-size: 1.2em;
+    font-weight: bold;
+    color:   #16a085  ;
+    cursor: pointer;
+}
+.head .right-head .description .noti{
+    display: flex;
+    position: relative;
+}
+.head .right-head .description .noti .count{
+    display: flex;
+    background-color: red;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    font-size: 11px;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+}

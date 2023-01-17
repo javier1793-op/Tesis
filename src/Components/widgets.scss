@@ -1,0 +1,55 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    background:#fff ;
+    min-height: 25%;
+    min-width: 92%;
+    border-radius: 10px;
+    padding: 2em;
+    gap: .5em;
+}
+
+.info{
+    display: flex;
+    align-items: center;
+    gap: 2em; 
+}
+.info .alert{
+    color: red;
+    background: #e5e8e8;
+    width: 40px;
+    height: 40px;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7px;
+}
+.info .description{
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.detalle{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.detalle .left-w{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+.detalle .left-w .icon{
+    color:  #3498db;
+}
+.detalle .left-w .name{
+    font-size: .9em;
+    font-weight: bold;
+    opacity: 30%;
+}
+.detalle .date{
+    font-size: .9em;
+    font-weight: bold;
+    opacity: 30%; 
+}
