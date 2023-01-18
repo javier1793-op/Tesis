@@ -1,12 +1,16 @@
 import Home from "./Pages/Home"
 import Login from "./Pages/Login"
-
+import {BrowserRouter, Routes, Route} from "react-router-dom"
 
 function App() {
 
   return (
     <div className="App">
-      <Home/>
+      <BrowserRouter>
+        <Routes>
+            <Route exact path="/" element={<Login/>}/>
+        </Routes>
+      </BrowserRouter>
     </div>
   )
 }

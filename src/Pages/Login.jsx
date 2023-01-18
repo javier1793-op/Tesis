@@ -1,8 +1,39 @@
-import React from 'react'
+import React,{useState} from 'react'
 import './login.scss'
+import Home from './Home'
 
+ const initailForm=
+  {
+    id:0,
+    mail:"",
+    pass:"",
+    name:"",
+    perfil:""
+  }
+ 
 
 const Login = () => {
+
+  const [form,setForm]=useState(initailForm);
+
+  console.log(form)
+
+  const handleChange = (e) => {
+    setForm({
+      ...form,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = (e) =>{
+    e.preventDefault();
+     
+    if (!form.mail || !form.pass) {
+      alert("Datos incompletos");
+      return;
+    }
+  };
+
   return (
     <>
        <div className="container">
@@ -12,15 +43,29 @@ const Login = () => {
               <div className="description">Welcome back! Please enter your details </div>
             </div>
            
-            <div className="form">
+            <form 
+            className="form"
+            onSubmit={handleSubmit}>
               <div className="inputbox">
                 <span>Email</span>
-              <input type="text" placeholder='Enter your email' />
+              <input 
+              type="text" 
+              name='mail'
+              placeholder='Enter your email'
+              onChange={handleChange}
+              value={form.mail}
+               />
               </div>
 
               <div className="inputbox">
                 <span>Password</span>
-              <input type="password" placeholder='Enter your password' />
+              <input 
+              type="password" 
+              name='pass'
+              placeholder='Enter your password'
+              onChange={handleChange}
+              value={form.pass}
+               />
               </div>
 
               <div className="links">
@@ -30,7 +75,7 @@ const Login = () => {
               <div className="inputbox boton">
                   <input type="submit" value="Sing in" />
               </div>
-            </div>
+            </form>
               
           </div>
 

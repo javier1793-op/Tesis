@@ -3,7 +3,7 @@ import "./home.scss";
 import Head from "../Components/Head";
 import Nav from "../Components/Nav";
 import Footer from "../Components/Footer";
-import Widgets from "../Components/Widgets";
+
 
 const Home = () => {
   return (
@@ -15,9 +15,7 @@ const Home = () => {
 
         <div className="content">
         <div className="title">Ultimas Actividades</div>
-          <Widgets/>
-          <Widgets/>
-          <Widgets/>
+         
           </div>
 
         <div className="footer"><Footer/></div>
