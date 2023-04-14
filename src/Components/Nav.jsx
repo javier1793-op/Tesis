@@ -1,53 +1,66 @@
-import React from 'react'
-import "./nav.scss"
-import Logo from "./../img/logo.jpg"
+import React from "react";
+import "./nav.scss";
+import Logo from "./../img/reciplas.png";
+import { FcHome } from "react-icons/fc";
+import { FcManager, FcShop,FcShipped ,FcBullish,FcFactory} from "react-icons/fc";
 
 const Nav = () => {
   return (
     <>
-    <section className="headnav">
-            <img src={Logo} alt="LOGO" />
-            <div className="name">Family business</div>
-          </section>
+      <section className="headnav">
+        <img src={Logo} alt="LOGO" />
+        <div className="name"></div>
+      </section>
 
-          <section className="element">
-            <div className="title">
-              <div className="icontitle">
-                <i className="fa-solid fa-house-chimney"></i>
-              </div>
-              <div className="area">Dashboard</div>
-            </div>
+      <section className="element">
+        <div className="title">
+          <div>
+            <FcHome className="icontitle" />
+          </div>
+          <div className="area homeItem">Dashboard</div>
+        </div>
+        <div className="title">
+          <div>
+            <FcManager className="icontitle" />
+          </div>
+          <div className="area">Users</div>
+        </div>
 
-            <div className="item">Beginning</div>
-            <div className="title">
-              <div className="icontitle">
-                <i className="fa-solid fa-user"></i>
-              </div>
-              <div className="area">Users</div>
-            </div>
+        <div className="item">Records</div>
+        <div className="title">
+          <div className="icontitle">
+            <FcShop className="icontitle" />
+          </div>
+          <div className="area ">Sale</div>
+        </div>
+        <div className="item">Orders</div>
+        <div className="title">
+          <div className="icontitle">
+            <FcFactory className="icontitle" />
+          </div>
+          <div className="area homeItem">Production</div>
+        </div>
 
-            <div className="item">Customers</div>
-            <div className="item">Suppliers</div>
-            <div className="title">
-              <div className="icontitle">
-                <i className="fa-solid fa-cart-shopping"></i>
-              </div>
-              <div className="area">Activity</div>
-            </div>
+        <div className="title">
+          <div className="icontitle">
+            <FcShipped className="icontitle" />
+          </div>
+          <div className="area homeItem">Shopping</div>
+        </div>
 
-            <div className="item">Sales</div>
-            <div className="item">Purchases</div>
-            <div className="title">
-              <div className="icontitle">
-                <i className="fa-solid fa-chart-simple"></i>
-              </div>
-              <div className="area">Statistics</div>
-            </div>
+        
+        <div className="title">
+          <div className="icontitle">
+            
+            <FcBullish className="icontitle" />
+          </div>
 
-            <div className="item">Weekly</div>
-          </section>
+          <div className="area">Statistics</div>
+        </div>
+
+      </section>
     </>
-  )
-}
+  );
+};
 
-export default Nav
+export default Nav;

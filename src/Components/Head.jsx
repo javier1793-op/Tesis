@@ -1,5 +1,5 @@
 import React from "react";
-import Perfil from "./../img/perfil.png";
+import Perfil from "./../img/LOGO.png";
 import "./head.scss"
 
 const Head = () => {
